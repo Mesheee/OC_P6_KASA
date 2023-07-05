@@ -7,10 +7,15 @@ const Home = () => {
 
   return (
     <div>
-      <Banner // Utilisation du composant Banner
-        title="Chez vous, partout et ailleurs" // Propriété : titre du banner
-        background={bannerImageHome} // Propriété : image de fond du banner
-      />
+     <Banner
+  title={
+    <>
+      Chez vous,<span className="line-break"></span> partout et ailleurs
+    </>
+  }
+  background={bannerImageHome}
+/>
+
       <Cards/>
     </div>
   );
