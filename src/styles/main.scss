@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "./layouts/header.scss";
+@import "./layouts/footer.scss";
+@import "./components/banner.scss";
+@import "./components/cards.scss";
+@import "./components/collapse.scss";
+@import "./components/slideshow.scss";
+@import "./pages/error.scss";
+@import "./pages/accomodation.scss";
+@import "./pages/home.scss";
+@import "./components/transition.scss";
+
+
+body {
+  font-family: 'Montserrat';
+}
+
+
+

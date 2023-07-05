@@ -1,0 +1,96 @@
+$collapseContainer-maxWidth: 1024px;
+$collapseContainer-borderRadius: 5px;
+$collapseHeader-height: 47px;
+$collapseHeader-titleColor: #ffffff;
+$collapseHeader-titleSize: 24px;
+$collapseChevron-width: 30px;
+$collapseContent-maxWidth: 1023px;
+$collapseContent-background: #f7f7f7;
+$collapseContent-color: #ff6060;
+$collapseContent-fontSize: 20px;
+$collapseContent-paddingY: 65px;
+$collapseContent-paddingX: 18px;
+
+.collapse-container {
+  margin: 31px auto;
+  max-width: $collapseContainer-maxWidth;
+
+  .collapse {
+    padding: 0px 15px;
+    width: auto;
+    height: $collapseHeader-height;
+    background-color: #ff6060;
+    border-radius: $collapseContainer-borderRadius;
+    cursor: pointer;
+
+    .collapse-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      .collapse-title {
+        color: $collapseHeader-titleColor;
+        font-weight: 500;
+        font-size: $collapseHeader-titleSize;
+      }
+
+      .collapse-chevron {
+        width: $collapseChevron-width;
+      }
+    }
+  }
+
+  .collapse-content {
+    position: relative;
+    top: -48px;
+    z-index: -1;
+    width: auto;
+    padding: $collapseContent-paddingY $collapseContent-paddingX;
+    margin: auto;
+    background-color: $collapseContent-background;
+    color: $collapseContent-color;
+    font-size: $collapseContent-fontSize;
+    border-radius: $collapseContainer-borderRadius;
+  }
+
+  //RESPONSIVE DESIGN
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    .collapse {
+      margin: 20px 20px;
+    }
+    .collapse-content {
+      margin: 0 20px;
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    margin: 0 20px;
+    .collapse {
+      margin: 20px auto;
+      height: 30px;
+      width: auto;
+      
+
+      .collapse-header {
+        .collapse-title {
+          font-size: 18px;
+          padding-left: 10px;
+        }
+        .collapse-chevron {
+          width: 20px;
+          padding-right: 10px;
+        }
+      }
+    }
+    .collapse-content {
+      text-align: justify;
+      width: auto;
+      padding: 40px 18px;
+      font-size: 15px;
+    }
+  }
+}

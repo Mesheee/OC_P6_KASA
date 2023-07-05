@@ -1,0 +1,276 @@
+.accomodation_container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+
+  .accomodation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+
+    &_header {
+      display: flex;
+      flex-direction: column;
+
+      .accomodation_title {
+        font-size: 36px;
+        color: #ff6060;
+        font-weight: 500;
+        margin: 30px 0px 10px 0px;
+      }
+      .accomodation_location {
+        font-size: 18px;
+        color: #ff6060;
+        font-weight: 500;
+        margin: 0;
+      }
+    }
+    &_host {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      p {
+        width: 70px;
+        color: #ff6060;
+        text-align: right;
+      }
+      img {
+        margin-left: 10px;
+        width: 64px;
+        height: 64px;
+        border-radius: 50px;
+      }
+    }
+    &_tags_stars {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .tags {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+
+        .accomodation_tag {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 115px;
+          padding: 2px 10px 2px 10px;
+          height: 25px;
+          margin-right: 10px;
+          background-color: #ff6060;
+          color: #ffffff;
+          list-style: none;
+          text-align: center;
+          border-radius: 10px;
+        }
+      }
+
+      .accomodation_stars {
+        position: relative;
+
+        .star {
+          width: 24px;
+          margin-left: 16px;
+        }
+
+        .filled_star_container {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .accomodation_collapse_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 100px;
+
+    .collapse {
+      width: 542px;
+      
+    }
+
+    .collapse-container {
+      width: 100%;
+
+      .collapse-content {
+        width: auto;
+        min-height: 150px;
+        padding: 60px 20px 0px 20px;
+        font-size: 18px;
+        text-align: justify;
+
+        .accomodation-equipement {
+          list-style: none;
+
+          .equipement {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// RESPONSIVE DESIGN
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .accomodation_container {
+    .accomodation {
+      margin: 20px 20px;
+
+      &_header {
+        .accomodation_title {
+          font-size: 20px;
+        }
+        .accomodation_location {
+          font-size: 16px;
+        }
+      }
+
+      &_host {
+        display: none;
+      }
+
+      &_tags_stars {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .tags {
+          width: 100%;
+          margin-bottom: 16px;
+          justify-content: flex-start;
+          align-items: center;
+
+          .accomodation_tag {
+            font-size: 16px;
+            height: 25px;
+            min-width: 140px;
+            padding: 0 15px;
+          }
+        }
+
+        .accomodation_stars {
+          .star {
+            width: 24px;
+            margin-left: 0;
+            margin-right: 7px;
+          }
+        }
+      }
+    }
+
+    .accomodation_collapse_container {
+      max-width: 1024px;
+      width: auto;
+      margin: 0 20px;
+      flex-direction: column;
+
+      .collapse-container {
+        max-width: 1024px;
+        width: auto;
+
+        .collapse {
+          margin: 20px 0px;
+          width: 100%;
+        }
+
+        .collapse-content {
+          margin: 0px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .accomodation_container {
+    position: relative;
+
+
+    .accomodation {
+      padding: 0px;
+
+      &_header {
+        .accomodation_title {
+          font-size: 18px;
+        }
+        .accomodation_location {
+          font-size: 14px;
+        }
+      }
+
+      &_host {
+        display: none;
+      }
+
+      &_tags_stars {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .tags {
+          width: 100%;
+          margin-bottom: 16px;
+          justify-content: flex-start;
+          align-items: center;
+
+          .accomodation_tag {
+            font-size: 16px;
+            height: 25px;
+            min-width: 140px;
+            padding: 0 15px;
+          }
+        }
+
+        .accomodation_stars {
+          .star {
+            width: 24px;
+            margin-right: 5px;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    .accomodation_collapse_container {
+      width: auto;
+      margin: 0px;
+      flex-direction: column;
+      gap: 0;
+
+      .collapse-container {
+        width: auto;
+        margin: 0;
+
+        .collapse {
+          width: 100%;
+          padding: 0;
+        }
+        
+        .collapse-content {
+          padding: 40px 10px 10px 10px;
+          margin: 0px;
+          width: auto;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
