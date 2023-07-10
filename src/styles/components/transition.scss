@@ -1,28 +1,19 @@
-/* styles.css */
+$fade-duration: 1.7s;
+$fade-opacity-start: 0.7;
+$fade-opacity-end: 1;
+$fade-translateY-start: 20px;
+$fade-translateY-end: 0;
 
-.fade-in {
-    animation: fadeIn 1s ease-in;
-  }
-  
-  .fade-out {
-    animation: fadeOut 1s ease-out;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
-  
+.fade-enter {
+  opacity: $fade-opacity-start;
+  transform: translateY($fade-translateY-start);
+  transition: opacity $fade-duration, transform $fade-duration;
+}
+
+.fade-enter-active {
+  opacity: $fade-opacity-end;
+  transform: translateY($fade-translateY-end);
+  transition: opacity $fade-duration, transform $fade-duration;
+}
+
+

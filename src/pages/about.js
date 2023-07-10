@@ -1,19 +1,28 @@
+import React, { useEffect, useState } from "react";
 import Banner from "../components/banner";
 import Collapse from "../components/collapse";
 import bannerImageAbout from "../assets/images/banner_kasa_2.png";
+import "../styles/components/transition.scss";
 
 const About = () => {
-  document.title = "Kasa - À propos";
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // Mise à jour du titre de la page
+    document.title = "Kasa - À propos";
+
+    // Activation du composant (délai d'apparition avec la transition)
+    setIsMounted(true);
+  }, []);
 
   return (
-    <div>
-      <Banner
-         background={bannerImageAbout}
-      />
+    <div className={`fade-enter ${isMounted ? "fade-enter-active" : ""}`}>
+      {/* Composant de bannière avec une image de fond */}
+      <Banner background={bannerImageAbout} />
       <div className="about-container">
         <Collapse
           title="Fiabilité"
-          content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."
+          content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."
         />
         <Collapse
           title="Respect"

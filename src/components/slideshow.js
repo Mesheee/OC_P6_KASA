@@ -18,15 +18,15 @@ const SlideShow = ({ images }) => {
   };
 
   return (
-    <div className="slider-container">
+    <div className="slider_container">
       <img
-        className="banner-img"
+        className="banner_img"
         src={actualImage}
         alt="Intérieur appartement"
       />
       {/* Affiche les flèches de navigation uniquement si le nombre d'images est supérieur à 1 */}
       {slideLength > 1 && (
-        <div className="sup-container">
+        <div className="custom_container">
           {/* Déclenche la fonction slideLeft lors du clic sur la flèche gauche */}
           <img
             onClick={slideLeft}
@@ -34,7 +34,7 @@ const SlideShow = ({ images }) => {
             src={chevronLeft}
             alt="arrow left"
           />
-          <p className="banner-number">
+          <p className="banner_number">
             {counter + 1}/{slideLength}
           </p>
           {/* Déclenche la fonction slideRight lors du clic sur la flèche droite */}

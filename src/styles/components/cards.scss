@@ -58,8 +58,7 @@ $card-hover-scale: 1.02;
     }
   }
 
-  //RESPONSIVE DESIGN
-
+  // Responsive design pour les écrans de taille moyenne (768px - 992px)
   @media screen and (min-width: 768px) and (max-width: 992px) {
     .cards {
       grid-template-columns: 1fr;
@@ -74,12 +73,14 @@ $card-hover-scale: 1.02;
     }
   }
 
+  // Responsive design pour les petits écrans (320px - 767px)
   @media screen and (min-width: 320px) and (max-width: 767px) {
+    background-color: white; /* Couleur d'arrière-plan pour les petits écrans */
+
     .cards {
       grid-template-columns: 1fr;
       grid-row-gap: 20px;
       width: 100%;
-      background-color: white;
       padding: 0;
       margin-left: 10px;
       margin-right: 10px;

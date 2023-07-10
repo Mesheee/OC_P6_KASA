@@ -1,5 +1,7 @@
 const Error = () => {
+  // Modification du titre de l'onglet
   document.title = "Kasa - Erreur 404";
+
   return (
     <div className="error">
       <div className="error_container">

@@ -68,12 +68,14 @@
           color: #ffffff;
           list-style: none;
           text-align: center;
-          border-radius: 10px;
+          border-radius: 8px;
         }
       }
 
       .accomodation_stars {
         position: relative;
+        margin-top: 20px;
+
 
         .star {
           width: 24px;
@@ -95,20 +97,11 @@
     justify-content: space-between;
     gap: 100px;
 
-    .collapse {
-      width: 542px;
-      
-    }
+   
 
-    .collapse-container {
+    .collapse_container {
       width: 100%;
 
-      .collapse-content {
-        width: auto;
-        min-height: 150px;
-        padding: 60px 20px 0px 20px;
-        font-size: 18px;
-        text-align: justify;
 
         .accomodation-equipement {
           list-style: none;
@@ -118,12 +111,10 @@
           }
         }
       }
-    }
   }
 }
 
-// RESPONSIVE DESIGN
-
+// Responsive design pour les écrans de taille moyenne (768px - 992px)
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .accomodation_container {
     .accomodation {
@@ -136,10 +127,6 @@
         .accomodation_location {
           font-size: 16px;
         }
-      }
-
-      &_host {
-        display: none;
       }
 
       &_tags_stars {
@@ -197,6 +184,7 @@
   }
 }
 
+// Responsive design pour les petits écrans (320px - 767px)
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .accomodation_container {
     position: relative;
@@ -207,7 +195,8 @@
 
       &_header {
         .accomodation_title {
-          font-size: 18px;
+          font-size: 22px;
+          margin-top: 0px;
         }
         .accomodation_location {
           font-size: 14px;
@@ -215,7 +204,15 @@
       }
 
       &_host {
-        display: none;
+        transform:translateY(140px);
+      
+        p {
+          font-size: 14px;
+        }
+        img {
+          width: 44px;
+          height: 44px;
+        }
       }
 
       &_tags_stars {
@@ -230,20 +227,22 @@
           margin-bottom: 16px;
           justify-content: flex-start;
           align-items: center;
+          flex-direction: row;
+          flex-wrap: wrap;
 
           .accomodation_tag {
-            font-size: 16px;
+            font-size: 12px;
             height: 25px;
-            min-width: 140px;
-            padding: 0 15px;
+            min-width: 80px;
+            padding: 0 8px;
+            margin-top: 10px;
           }
         }
 
         .accomodation_stars {
           .star {
-            width: 24px;
-            margin-right: 5px;
-            margin-left: 0;
+            width: 18px;
+            margin: 0px 5px 0px 0px;
           }
         }
       }
@@ -252,6 +251,7 @@
     .accomodation_collapse_container {
       width: auto;
       margin: 0px;
+      margin-top: 20px;
       flex-direction: column;
       gap: 0;
 
